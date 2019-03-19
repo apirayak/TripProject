@@ -19,7 +19,7 @@ class TripDetail(models.Model):
     start = models.CharField(max_length=200, default="")
     end = models.CharField(max_length=200, default="")
     distance = models.FloatField(default=0)
-    pub_date = models.DateTimeField('Trip date', default=timezone.now())
+    trip_date = models.DateTimeField('Trip date', default=timezone.now())
     employee_name = models.CharField(max_length=200, default="")
     def calculateCost(self):
         return self.distance*8   

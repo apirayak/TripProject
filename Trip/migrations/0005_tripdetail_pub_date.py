@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AddField(
             model_name='tripdetail',
-            name='pub_date',
-            field=models.DateTimeField(default=datetime.datetime(2019, 3, 19, 12, 30, 7, 216589, tzinfo=utc), verbose_name='date published'),
+            name='trip_date',
+            field=models.DateTimeField(default=datetime.datetime(2019, 3, 19, 12, 30, 7, 216589, tzinfo=utc), verbose_name='Trip date'),
         ),
     ]
