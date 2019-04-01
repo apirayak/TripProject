@@ -6,11 +6,7 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 
 
-# Create your models here.
-
-
-
-
+# Create your models here:
 class Trip(models.Model):
     employee_name = models.CharField(max_length=200, default="")
     post_date = models.DateTimeField('post date', auto_now_add=True)
@@ -31,9 +27,7 @@ class TripDetail(models.Model):
     @property
     def cost(self):
         return self.distance * 8
-    
-   # def __str__(self):
-    #     return self.id
+
 
 class Evidence(models.Model):
     TripDetail = models.ForeignKey(TripDetail, on_delete=models.CASCADE,default = None)
