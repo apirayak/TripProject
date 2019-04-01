@@ -53,7 +53,10 @@ class TripAdmin(nested_admin.NestedModelAdmin):
         for extra in extras:
             total_extra = total_extra + extra.extra_cost
         return total_extra
-        
+
+    def total(self,obj):
+        pass
+
     def get_employee_name(self, obj):
         return obj.employee.employee_name
     get_employee_name.short_description = 'Employee name'
